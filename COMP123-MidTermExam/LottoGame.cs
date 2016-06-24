@@ -4,6 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* 
+ * Author: Meer Zaheen Nazmul
+ * Student ID: 300522487
+ * 
+ * Date: June 24, 2016 
+ * Description: This program demonstrates a game 'Console Lottery Number Picker'
+ * Version: 0.0.1 -  . 
+ */
+
 namespace COMP123_MidTermExam
 {
     /**
@@ -129,8 +138,13 @@ namespace COMP123_MidTermExam
 
         private void _build()
         {
-            throw new System.NotImplementedException();
+            for (int i = 1; i < SetSize + 1; i++)
+            {
+                NumberList.Add(i);
+            }
         }
+        //this._setSize = numbers.Next(1, 50);
+    }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -150,7 +164,7 @@ namespace COMP123_MidTermExam
             string lottoNumberString = String.Empty;
 
             // for each lottoNumber in ElementList, loop...
-            foreach (int lottoNumber in ElementList)
+            foreach (int lottoNumber in this.ElementList)
             {
                 // add lottoNumber and appropriate spaces to the lottoNumberString variable
                 lottoNumberString += lottoNumber > 9 ? (lottoNumber + " ") : (lottoNumber + "  ");
@@ -163,9 +177,22 @@ namespace COMP123_MidTermExam
 
         // CREATE the public PickElements method here ----------------------------
 
-        public void PickElement()
+        public void PickElements()
         {
-            throw new System.NotImplementedException();
+            if (this.ElementList.Count > 0)
+            {
+               this.elementList.Clear();
+               this.numberList.Clear();
+               this._build();
+            }
+
+        for (int i = 0; i < this.SetSize; i++)
+        {
+
+            int random = this.Random.Next(1, NumberList.Count);
+
+            this.ElementList.Add(this.NumberList.(random));
+
         }
     }
 }
