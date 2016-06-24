@@ -17,12 +17,71 @@ namespace COMP123_MidTermExam
      */
     public abstract class LottoGame
     {
+
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
+
+        private List<int> _elementList;
+        private int _elementNumber;
+        private List<int> _numberList;
+        private Random _random;
+        private int _setSize;
+
         // CREATE private fields here --------------------------------------------
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
+
+        public List<int> ElementList
+        {
+            get
+            {
+                return this._elementList;
+            }
+        }
+
+        public int ElementNumber
+        {
+            get
+            {
+                return this._elementNumber;
+            }
+
+            set
+            {
+                this._elementNumber = value;
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get
+            {
+                return this._numberList;
+            }
+        }
+
+        public Random random
+        {
+            get
+            {
+                return this._random;
+            }
+        }
+
+        public int SetSize
+        {
+            get
+            {
+                return this._setSize;
+            }
+
+            set
+            {
+                this._setSize = value;
+            }
+        }
+
+
+
         // CREATE public properties here -----------------------------------------
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -53,11 +112,25 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
+
+
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the private _initialize method here -----------------------------
 
+        private void _initialize()
+        {
+            this._numberList = new List<int>();
+            this._elementList = new List<int>();
+            this._random = new Random();
+        }
+
         // CREATE the private _build method here -----------------------------------
+
+        private void _build()
+        {
+            throw new System.NotImplementedException();
+        }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -89,5 +162,10 @@ namespace COMP123_MidTermExam
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
+
+        public void PickElement()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
